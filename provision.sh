@@ -4,6 +4,9 @@ apt-get install -y ruby2.3 ruby2.3-dev git postgresql postgresql-client language
 update-alternatives --set ruby /usr/bin/ruby2.3 >/dev/null 2>&1
 update-alternatives --set gem /usr/bin/gem2.3 >/dev/null 2>&1
 
+gem install bundler
+gem install rails
+
 echo "postgres:postgres" | chpasswd
 
 DB_NAME="rails_dev"
