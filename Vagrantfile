@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-16.04"
   config.vm.synced_folder "./shared", "/vagrant"
   config.vm.provision "shell", path: "provision.sh"
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
